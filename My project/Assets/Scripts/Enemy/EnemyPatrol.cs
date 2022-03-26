@@ -35,6 +35,8 @@ public class EnemyPatrol : MonoBehaviour
 
     private void Update()
     {
+
+
         if (movingLeft)
         {
             if (enemy.position.x >= leftEdge.position.x)

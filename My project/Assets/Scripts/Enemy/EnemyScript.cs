@@ -6,33 +6,34 @@ public class EnemyScript : MonoBehaviour
 {
     public Enemy enemy;
     public Character character;
-    public GameObject patrol;
+    public Animator animator;
+    private int health;
 
 
     private void Start()
     {
-        enemy.health = 100;
+        health = enemy.health;
     }
 
 
     public void TakeDamage(int takeDamage)
     {
-        enemy.health -= takeDamage;
+        health -= takeDamage;
 
-        if (enemy.health <= 0)
+        if (health <= 0)
         {
-            Die();
-            character.currentScore += 1;
-            character.totalScore += 1;
-            Destroy(patrol);
             
+            Die();
+            character.score += 10;
+
         }
     }
 
     private void Die()
     {
-        Instantiate(gameObject,transform.position,Quaternion.identity);
-        Destroy(gameObject);
-
+        animator.SetTrigger("die");
+        Destroy(gameObject,0.9f);  
     }
+
+
 }

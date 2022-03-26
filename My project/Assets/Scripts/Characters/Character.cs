@@ -10,8 +10,6 @@ public class Character : ScriptableObject
     public int attack;
     public int defense;
     public int health;
-    public bool alive;
-    public int currentScore;
-    public int totalScore;
+    public int score;
 
 }

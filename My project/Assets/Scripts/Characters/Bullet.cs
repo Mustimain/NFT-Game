@@ -8,7 +8,6 @@ public class Bullet : MonoBehaviour
     public Rigidbody2D rigidBody;
     public Character character;
     public Enemy enemy;
-    public Animator animator;
 
     void Start()
     {
@@ -22,12 +21,13 @@ public class Bullet : MonoBehaviour
 
         EnemyScript enemyScript = collision.GetComponent<EnemyScript>();
 
-        if (enemyScript != null)
+        if (collision.tag == "Enemy")
         {
             enemyScript.TakeDamage(character.attack);
+            Debug.Log(enemy.name);
             Destroy(gameObject);
-
         }
+
 
     }
 }

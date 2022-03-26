@@ -8,25 +8,16 @@ public class CharacterScript : MonoBehaviour
     private Rigidbody2D rb;
     public Character character;
     public GameOverMenu gameOverMenu;
-    
 
 
     void Start()
     {
-        character.currentScore = 0;
+        character.score = 0;
         character.health = 100;
         rb = GetComponent<Rigidbody2D>();
     }
-    private void Update()
-    {
-        if (character.health <= 0)
-        {
-            Die();
-        }
 
-
-    }
-
+    // Karakter olum tag? olan nesnelere t?klarsa oluyor
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Die"))
@@ -36,16 +27,24 @@ public class CharacterScript : MonoBehaviour
         }
     }
 
+    // Karakter ölümü ve skor yazd?rma
     private void Die()
     {
         
         Destroy(gameObject);
-        gameOverMenu.ScoreText(character.currentScore);
+        gameOverMenu.ScoreText(character.score);
     }
 
+    // Karakter hasar yemesi
     public void TakeDamage(int damage)
     {
         character.health -= damage;
+
+        if (character.health <= 0)
+        {
+            Die();
+        }
+
     }
 
 

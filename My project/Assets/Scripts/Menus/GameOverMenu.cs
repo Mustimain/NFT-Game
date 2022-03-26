@@ -12,7 +12,7 @@ public class GameOverMenu : MonoBehaviour
 
     private void Update()
     {
-        scoreUI.text = "Score: " + character.currentScore.ToString();
+        scoreUI.text = "Score: " + character.score.ToString();
     }
 
     private void Start()

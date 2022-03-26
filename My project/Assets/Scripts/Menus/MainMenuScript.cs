@@ -11,7 +11,7 @@ public class MainMenuScript : MonoBehaviour
 
     private void Update()
     {
-        text.text = character.totalScore.ToString();
+        text.text = character.score.ToString();
     }
 
 
