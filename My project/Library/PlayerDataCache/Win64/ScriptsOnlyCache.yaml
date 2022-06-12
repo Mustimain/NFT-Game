@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - Bullet
     - Character
     - CharacterChoose
+    - CharacterHealthBar
     - CharacterMovement
     - CharacterScript
     - ChooseUltimate
@@ -13,7 +14,6 @@ ScriptsOnlyBuild:
     - EnemyPatrol
     - EnemyScript
     - GameOverMenu
-    - HealthBar
     - LoginScript
     - MainMenuScript
     - MeleeAttack
@@ -33,11 +33,8 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -54,10 +51,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -681,7 +676,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 6078b97a88fff031daba5b8016024ecd
+      Hash: 7b2f354a113f62b344db20edb3c03608
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Character
@@ -810,7 +805,7 @@ ScriptsOnlyBuild:
       Hash: 6809c4516543650e65472ed523e034ca
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: HealthBar
+    className: CharacterHealthBar
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -981,7 +976,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: d6c5d68d7dc7de9280e9d91d3e928514
+      Hash: 588ce1c0dd9d0366873c51b9e42b132e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Bullet
@@ -1137,7 +1132,7 @@ ScriptsOnlyBuild:
     className: CinemachineIndependentImpulseListener
   - hash:
       serializedVersion: 2
-      Hash: bc98c746b592bfcf2c47977c5263862f
+      Hash: c90e0d1e0e5808aca649ec6dee7bcdb7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyScript
@@ -1329,7 +1324,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: ea72771a5e2bb81084d462c09c64f3e5
+      Hash: c2267e11175bc4186cf4633b3f4119bf
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MeleeAttack
